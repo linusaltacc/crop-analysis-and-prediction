@@ -42,7 +42,8 @@ if user_input=="suggest me a best suited crop":
     submit = form.form_submit_button("Submit")
     if submit:
         st.session_state.past.append("suggest me a best suited crop")
-        st.session_state.generated.append("The best crop to grow with these parameters is" + analyze(n,p,k,temp,humidity,ph,rainfall))
+        best_crop = "The best crop to grow with these parameters is " + analyze(n,p,k,temp,humidity,ph,rainfall)
+        st.session_state.generated.append(best_crop)
     
 if user_input:
     print(chat.initialization(user_input))

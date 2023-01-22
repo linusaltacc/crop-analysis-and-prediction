@@ -25,16 +25,5 @@ def analyze(n,p,k,temperature,humidity,ph,rainfall):
     accuracy = model.score(X_test, y_test)
     print("Accuracy:", accuracy)
 
-    # chatbot guiding system
-    # while True:
-    #     n = float(input("Enter Nitrogen (N) content: "))
-    #     p = float(input("Enter Phosphorus (P) content: "))
-    #     k = float(input("Enter Potassium (K) content: "))
-    #     temperature = float(input("Enter temperature: "))
-    #     humidity = float(input("Enter humidity: "))
-    #     ph = float(input("Enter pH level: "))
-    #     rainfall = float(input("Enter rainfall: "))
-    #     # make a prediction
-
     crop = model.predict([[n,p,k,temperature,humidity,ph,rainfall]])
-    return crop
+    return crop[0]
