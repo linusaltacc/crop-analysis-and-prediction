@@ -55,9 +55,3 @@ def initialization(msg):
     return res
 
 user_inp = ''
-# print('Hey!! Enter "exit" to exit')
-
-# while user_inp != 'exit':
-#     user_inp = str(input(""))
-#     res = initialization(user_inp)
-#     print('AI:' + res)

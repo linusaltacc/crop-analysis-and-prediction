@@ -17,13 +17,8 @@ def analyze(n,p,k,temperature,humidity,ph,rainfall):
     # train the SVM model
     svm_model = SVC()
     svm_model.fit(X_train, y_train)
-
-    # test the SVM model
-    svm_accuracy = svm_model.score(X_test, y_test)
-    print("SVM Accuracy:", svm_accuracy)
-    # test the model
     accuracy = model.score(X_test, y_test)
-    print("Accuracy:", accuracy)
+    print("SVM + Random Forest ensemble Accuracy:", accuracy)
 
     crop = model.predict([[n,p,k,temperature,humidity,ph,rainfall]])
     return crop[0]
